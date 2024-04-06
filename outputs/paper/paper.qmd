@@ -1,0 +1,440 @@
+---
+title: "Nasal Phones Across Tongues: Exploring Sound Symbolism in the Word 'Nose' Across Languages"
+author: Sami El Sabri
+thanks: "Code and data are available at: https://github.com/samielsabri/phonosemantic_typology_analysis"
+date: 02-13-2024
+date-format: long
+abstract: "The word for 'Nose' in English starts with a nasal sound - just a coincidence? This study looks at the phonosemantic relationship between nasal sounds and their reprsentation in words for 'nose' across over 200 languages, employing a combination of logistic regression analysis and permutation testing. There is a sigifniciant, non-random occurence of nasal phones in these words, suggesting a universal tendency to link nasal sounds with the concept of the nose. This pattern holds true across language families, challenging the long-held belief in the arbitrariness of language and indicating a deeper, potentially innate connection between sound and meaning for basic vocabulary in human languages."
+format: pdf
+toc: true
+number-sections: true
+bibliography: references.bib
+---
+
+```{r}
+#| include: false
+#| warning: false
+#| message: false
+
+library(tidyverse)
+library(knitr)
+library(broom)
+library(stats)
+
+nose_typology_data <- read.csv(here::here('outputs/data/nose_typology_dataset.csv'))
+
+```
+
+# Introduction
+
+The study of sound (phonetics) and meaning (semantics) are usually disconnected areas of inquiry within the wider study of language (linguistics). One of the core principles in modern linguistics is the arbitrariness of language: For the most part, there is no direct relationship between the form of a word and its meaning or vice versa. Nothing about the sounds in the word "cat" would give the listener a cue what it refers to; the meaning must be learned independently from the sound. Restricting language to a direct link between sound and meaning would get difficult, such that this arbitrariness is a crucial element of language freeing up the communication system, which is important as the number of words increases (Gasser, 2004). However, a growing body of cross-linguistic (typological) research challenges this notion, uncovering patterns of phonosemantics or sound symbolism that hint at a more iconic relationship between phonetic features and semantic content. While there are the more obvious onomatopoeia, which are words that directly imitate or represent sounds, like 'meow', this paper is more interested in more subtle forms of sound symbolism.
+
+This paper examines the prevalence of nasal sounds in the words for "nose" across more than 200 languages, investigating the hypothesis that there exists a non-arbitrary relationship between the sound of these words and their meaning. This research is motivated by existing studies in the field of phonosemantics, which suggest patterns of sound symbolism across various basic lexical items related to body parts. Notably, previous work by @urban2011 and @joo2019 has highlighted sound-symbolic associations in terms for "lip" and "tooth," among others. This study aims to extend these findings to the lexical representation of "nose," another word featured on the Leipzig-Jakarta or Swadesh List. Both lists feature words which linguists agree to be part of a most basic vocabulary, making these words relatively semantically stable, meaning that they are less likely to be borrowed from other languages. This research is leveraging these typological tendencies, exploring whether the semantic stability and physical function of the nose as a body part are mirrored in its phonological representation by a higher occurrence of nasal sounds than would be expected by chance.
+
+The estimand is therefore the proportion of languages that feature a nasal phone in their word for nose. The choice of this estimand is grounded in the hypothesis that there is a universal or widespread phonosemantic bias towards using nasal sounds in words for "nose," reflecting an iconic link between sound and meaning. This is predicated on the assumption that the articulatory properties of nasal phones (i.e., airflow through the nose) might be symbolically linked to the semantic field of nasal functions. Intuitively, this hypothesis holds true for most languages that most readers should be familiar with, such as "nose" in English, "nez" in French, "nariz" in Spanish etc., so this research specifically focuses on testing whether this observation is an artifact of genetic relationships between Indo-European langauges, or present in other unrelated language families.
+
+Utilizing a dataset comprising over 200 languages, the study employs statistical analysis to evaluate the presence of nasal phones in the word for "nose" and assesses the likelihood of their occurrence beyond random distribution. The methodology involves compiling lexical data from a range of languages, followed by a logistic regression analysis and permutation test to identify phonosemantic patterns. The results indicate a statistically significant trend for nasal sounds in the words for "nose", beyond the Indo-European language family, supporting the hypothesis of a sound-meaning association, which challenges the traditional notion of arbitrariness.
+
+The paper will begin with a closer look at the data source and measurement (@sec-data), followed by an explanation of the statistical model used (@sec-model) and selection of relevant results (@sec-results). Finally, I will conclude with a discussion of our findings to integrate them into the broader literature on phonosemantics (@sec-discussion). I will also discuss potential potential biases, limitations, and future directions. The analysis was conducted using the statistical programming language `R` [@citeR]. In the data analysis and visualization process, I also made use of the following `R` packages: `tidyverse` [@citetidyverse], `dplyr` [@citedplyr], `knitr` [@citeknitr], and `stats` [@citestats].
+
+# Data {#sec-data}
+
+## Source and Sampling {#sec-source}
+The dataset for this study was constructed to investigate the phonosemantic relationship between the sound of the word "nose" and its meaning across languages. Initially, translations for "nose" were obtained from Google Translate and Bing Translate for approximately 150 languages. Although Google Translate has faced it fair share of criticism, it has become more accurate in recent years, in particular for simple words, and when using back-and-forth translation as a validation tool [@tsai2019]. However, given the well-documented bias of Google Translate towards Indo-European languages, additional efforts were made to ensure broader linguistic diversity and expand the dataset. 
+
+To this end, Ethnologue, a comprehensive language database, was consulted to identify languages from underrepresented families [@Ethnologue24]. Ethnologue lists 160 language families, which became the sampling frame. Then, a random systematic sampling method was used, with one in every four language families being included in the sample. If a language family had no more surviving languages, or none of the languages in the language family had any reliable online dictionary available, the next language in the language family was chosen. This led to the inclusion of a total of 40 language families. However, the number of languages sampled from each family varied significantly, as will be discussed in the next section.
+
+For these underrepresented languages sampled through Ethnologue, translations were sourced from Glosbe [@Glosbe] and other specialized language dictionaries. While such dictionaries are not always accurate, they have been shown to be a solid resource for basic vocabulary words such as 'nose' for underrepresented languages [@Aji2021]. This approach was taken to compile a dataset of a total of 242 languages, that is more representative of global linguistic diversity, countering the Indo-European bias present in initial sources.
+
+## Variables of Interest {#sec-variables}
+### Word for "Nose" and Presence of Nasal phones
+The primary variable of interest is the word for "nose" in each language, categorized by the presence or absence of nasal phones. The measurement of whether the word for "nose" in each language included nasal phones (e.g., /m/, /n/, /ŋ/, /ɱ/), a phonetic analysis was performed. This involved consulting IPA phonetic transcriptions of each word, where available [@IPA]. For languages where such transcriptions were not readily accessible, but a nasal phone was suspected given the latin transcription, secondary linguistic literature was utilized, to confirm the inferences on phonetic characteristics. This binary measurement (presence vs. absence of nasal phones) is pivotal for evaluating the study’s hypothesis on phonosemantic bias. 
+
+@tbl-rawdata shows a subset of some rows and selected columns, including the latin transcription of the word for "nose", its phonetic transcription according to the IPA, and the presence or absence of a nasal phone. @fig-nasal-phone then shows the distribution of languages based on the presence of nasal phones in the word for "nose", providing a clear visualization of how common nasal phones are in these words across different languages. An overwhelming 80% of languages in the sample have at least one nasal phone. @fig-nasal-phone-number breaks down the number of nasal phones further, with the vast majority of languages having exactly one nasal phone. However, while the median is indeed 1, as shown in @tbl-nasal-phone-number, the mean is 0.94. Moreover, no language in the sample had more than 3 nasal phones in their word for 'nose'.
+
+Moreover, I used the phonetic transcription to measure whether a word has a nasal phone in the onset of its first syllable. For example, the English word for 'Nose' starts with a nasal phone and would therefore be classified as having a nasal onset. Of those languages with a nasal phone in the word 'nose', @fig-nasal-onset shows the proportion of languages who have this phone in the onset position, with the majority of languages having the nasal phone not in the onset position, meaning that the nasal phone is found either in the syllable coda/rhyme, such as in the Arabic "/ænf/" or in the Turkish "/burun/".
+
+To further justify the direction of this research, @fig-nasal-phone-ie and @fig-nasal-onset-ie show the same parameters for languages of the Indo-European language family, which includes English, French, Spanish, and Hindi. Both figures confirm the initial assumption, that at least for Indo-European languages, an overwhelming proportion of languages have a nasal phone in the syllable onset in the word for 'nose'.
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-rawdata
+#| tbl-cap: Random Sample of 10 Languages from the Dataset Highlighting the Presence of Nasal phones in the Word for 'Nose'
+
+set.seed(122)
+random_subset <- sample_n(nose_typology_data, size = 10)
+random_subset <- random_subset %>% select(language, language_family, latin_transcription, ipa_transcription, nasal_phone)
+kable(head(random_subset))
+```
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-nasal-phone
+#| fig-cap: Distribution of Languages by Presence of a Nasal phone in the Word for 'Nose'
+
+nasal_summary <- nose_typology_data %>%
+  dplyr::group_by(nasal_phone) %>%
+  dplyr::summarise(count = n()) %>%
+  dplyr::mutate(proportion = count / sum(count),
+                label = ifelse(nasal_phone == TRUE, "Presence", "Absence"))
+
+ggplot(nasal_summary, aes(x = label, y = proportion, fill = label)) +
+  geom_bar(stat = "identity") +
+  scale_y_continuous(labels = scales::percent_format()) +
+  scale_fill_manual(values = c("Presence" = "blue", "Absence" = "red")) +
+  labs(x = "Nasal phone Presence", y = "Proportion", title = "Proportion of Languages With Nasal phone in 'Nose'") +
+  theme_minimal()
+```
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-nasal-phone-number
+#| fig-cap: Distribution of Languages by Number of Nasal phones in the word for 'Nose'
+
+nasal_phone_summary_count <- nose_typology_data %>%
+  group_by(nasal_phone_number) %>%
+  summarise(Language_Count = n()) %>%
+  ungroup()
+
+ggplot(nasal_phone_summary_count, aes(x = as.factor(nasal_phone_number), y = Language_Count, fill = as.factor(nasal_phone_number))) +
+  geom_bar(stat = "identity") +
+  scale_fill_brewer(palette = "Pastel1", name = "Nasal phone\nCount") +
+  labs(title = "Distribution of Languages by Number of Nasal phones in the word for 'Nose'",
+       x = "Number of Nasal phones",
+       y = "Count of Languages") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1),
+        plot.title = element_text(size = 14, face = "bold"),
+        legend.title = element_text(size = 12))
+
+```
+
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-nasal-phone-number
+#| tbl-cap: Summary Statistics of Languages by Number of Nasal phones in the word for 'Nose'
+
+nasal_phone_summary_stats <- nose_typology_data %>% summarize(mean=round(mean(nasal_phone_number),2), median = median(nasal_phone_number), sd = round(sd(nasal_phone_number),2))
+
+kable(nasal_phone_summary_stats)
+```
+
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-nasal-onset
+#| fig-cap: Distribution of Languages by Presence of Nasal phone in the Onset in the Word for 'Nose'
+
+nasal_summary_onset <- nose_typology_data %>%
+  dplyr::group_by(nasal_onset) %>% 
+  dplyr::summarise(count = n()) %>%
+  dplyr::mutate(proportion = count / sum(count),
+                label = ifelse(nasal_onset == TRUE, "Yes", "No"))
+
+ggplot(nasal_summary_onset, aes(x = label, y = proportion, fill = label)) +
+  geom_bar(stat = "identity") +
+  scale_y_continuous(labels = scales::percent_format()) +
+  scale_fill_manual(values = c("Yes" = "blue", "No" = "red")) +
+  labs(x = "Nasal onset", y = "Proportion", title = "Proportion of Languages With Nasal Onset in 'Nose'") +
+  theme_minimal()
+```
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-nasal-phone-ie
+#| fig-cap: Distribution of Languages by Presence of a Nasal phone in the Word for 'Nose' in Indo-European languages
+
+nasal_summary <- nose_typology_data %>% filter(language_family == "Indo-European") %>% 
+  dplyr::group_by(nasal_phone) %>%
+  dplyr::summarise(count = n()) %>%
+  dplyr::mutate(proportion = count / sum(count),
+                label = ifelse(nasal_phone == TRUE, "Presence", "Absence"))
+
+ggplot(nasal_summary, aes(x = label, y = proportion, fill = label)) +
+  geom_bar(stat = "identity") +
+  scale_y_continuous(labels = scales::percent_format()) +
+  scale_fill_manual(values = c("Presence" = "blue", "Absence" = "red")) +
+  labs(x = "Nasal phone Presence", y = "Proportion", title = "Proportion of Languages With Nasal phone in 'Nose'") +
+  theme_minimal()
+```
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-nasal-onset-ie
+#| fig-cap: Distribution of Languages by Presence of Nasal phone in the Onset in the Word for 'Nose' in Indo-European languages
+
+nasal_summary_onset <- nose_typology_data %>% filter(language_family=='Indo-European') %>% 
+  dplyr::group_by(nasal_onset) %>% 
+  dplyr::summarise(count = n()) %>%
+  dplyr::mutate(proportion = count / sum(count),
+                label = ifelse(nasal_onset == TRUE, "Yes", "No"))
+
+ggplot(nasal_summary_onset, aes(x = label, y = proportion, fill = label)) +
+  geom_bar(stat = "identity") +
+  scale_y_continuous(labels = scales::percent_format()) +
+  scale_fill_manual(values = c("Yes" = "blue", "No" = "red")) +
+  labs(x = "Nasal onset", y = "Proportion", title = "Proportion of Languages With Nasal Onset in 'Nose'") +
+  theme_minimal()
+```
+
+### Phones and Syllables
+Phones and syllables, as the basic units of speech sound, must be taken into account in any phonosemantic analysis. For this research, I used the phonetic transcription to count the number of phones and syllabize the word for 'nose'. For most languages, this was fairly uncomplicated due to syllable structure being encoded in phonetic transcriptions. For languages, where syllabilization was less obvious (e.g. "/nhompfu/" in Tsonga), educated guesses based on universal phonotactical constraints were made [@BerentLennertz2010]. The primary reason behind the interest in the number of syllables and phones was to count the number of nasal phones per syllable and the proportion of nasal phones in the word overall. @fig-nasal-phones-overallcount and @fig-nasal-phones-syllable show the variability in nasal phones per syllable and proportion overall. Some occurences of nasal phones (e.g. /nun/ in Bambara) are more likely to be the result of an underlying sound symbolism than others (e.g. /dægunu/ in Latvian), since we need to normalize the number of nasal phones with some standard unit of measurement, like a syllable.
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-nasal-phones-syllable-overallcount
+#| fig-cap: "Distribution of the proportion of nasal phones in the Word for 'Nose' Across Languages in the Dataset"
+
+ggplot(nose_typology_data, aes(x = nasal_phones_proportion)) +
+  geom_density(fill = "blue", alpha = 0.5) +
+  labs(title = "Proportion of nasal phones",
+       x = "Nasal Phones Per Syllable",
+       y = "Density") +
+  theme_minimal()
+
+```
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-nasal-phones-syllable
+#| fig-cap: "Distribution of Nasal Phones Per Syllable in the Word for 'Nose' Across Languages in the Dataset"
+
+ggplot(nose_typology_data, aes(x = nasal_phones_per_syllable)) +
+  geom_density(fill = "blue", alpha = 0.5) +
+  labs(title = "Number of Nasal Phones Per Syllable",
+       x = "Nasal Phones Per Syllable",
+       y = "Density") +
+  theme_minimal()
+
+```
+### Language Family
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-language-families
+#| fig-cap: "Number of languages sampled per Language Family included"
+#| fig-width: 2.5
+#| fig-height: 2.5
+
+languages_per_family <- nose_typology_data %>%
+  group_by(language_family) %>%
+  summarise(Count = n()) %>%
+  arrange(desc(Count))
+
+# Plotting the bar chart
+ggplot(languages_per_family, aes(x = reorder(language_family, Count), y = Count)) +
+  geom_bar(stat = "identity", fill = "skyblue") +
+  theme_minimal() +
+  labs(title = "Number of Languages Sampled from Each Language Family",
+       x = "Language Family", 
+       y = "Number of Languages") +
+  coord_flip()
+```
+
+In the context of this research, the inclusion of 40 language families, systematically sampled from Ethnologue’s comprehensive listing, ensures a broad representation of linguistic diversity. This stratified approach allows for a comparative analysis across major and minor language families, highlighting potential phonosemantic patterns that may be prevalent or unique within specific families. 
+
+@fig-language-families shows which language families have been included and how many languages have been sampled per language family. Unsurprisingly, given the availability of verifiable data on Indo-European languages, they are still overerpresented and make up almost 25% of the overall sample. This overrpresentation, however, is also a reflection of real-world data: Although Indo-European languages make up only 6% of the worlds living languages, 46% of the world's population speaks an Indo-European language [@Ethnologue24].
+
+A number of language families in the sample are only represented by one language, with is either due to the language family being too small or not having other members with verifiable vocabulary data. However, the majority of language families are represented by at least 2 languages.
+
+\newpage
+# Methodology and Model {#sec-model}
+In theory, the most accurate approach to investigate whether the occurence of the nasal phoneme is the result of sound symbolism or not, would be to quantify the likelihood of a nasal phone occuring in any given word in any given language in the sample. However, for the majority of languages, there is no such readily available data, and primary investigation would be beyond the scope of this research. Yet, we can make use of some facts to guide this research as heuristics. The vast majority of language have a nasal phone in their phonetic inventory, with /m/, /n/, and /ŋ/ being among the most universally found phonemes across languages, being represented in over 94%, 78%, and 63% of languages [@phoible]. Moreover, in languages which possess these phonemes, in particular /m/ and /n/ tend to be highly frequent within the langauge due to their ease of articulation. In fact, in the unrelated languages of German, Arabic, and Turkish, /n/ is either the second or third most frequent sound [@beutelspacher, @intellaren, @serengil2011]. Thus, for simplicity, we will assume that the frequency of these nasal phones in a language is not a significant predictor variable, as it is assumed to be constant across all languages.
+
+To investigate the phonosemantic relationship between the presence of nasal phones in words for "nose" across different languages, I propose a logistic regression model. This statistical approach enables us to estimate the likelihood of nasal phone presence based on various linguistic characteristics. 
+
+Moreover, a permutation test is performed to rigorously assess the robustness of our findings and to determine the likelihood of observing our results under the null hypothesis—that is, the absence of any phonosemantic relationship between the presence of nasal phonemes in words for "nose" and the linguistic characteristics we're examining. This non-parametric approach involves randomly shuffling the linguistic characteristic labels (such as whether a language is Indo-European or not) across our dataset multiple times, each time recalculating the statistic of interest (e.g., the difference in proportions of languages with nasal phonemes between shuffled groups). By doing so, we generate a distribution of the statistic under the assumption that there is no inherent association between the linguistic characteristics and the presence of nasal phonemes.
+
+This statistical approach is particularly valuable in the study of phonosemantics for several reasons. First, it does not rely on the assumption of normal distribution of the data, making it well-suited to the analysis of linguistic data, which often does not meet the parametric assumptions. Second, by directly simulating the distribution of outcomes under the null hypothesis, the permutation test provides a straightforward, data-driven way to assess the significance of our findings without overly complex statistical models that require data on underlying phone frequency distributions. Finally, this method complements the logistic regression analysis by providing an additional layer of validation for our conclusions regarding the presence of sound symbolism in the word for "nose".
+
+### Model Formulation
+
+The first logistic regression model is
+$$
+\log\left(\frac{p_i}{1-p_i}\right) = \beta_0  + \beta_1 \text{LanguageFamily}_i + \beta_2 \text{NumberOfPhones}_i + \beta_3 \text{NumberOfSyllables}_i
+$$
+
+where:
+- $p_i$ is the probability of the presence of at least one nasal phone in the word for "nose" in the $i^{th}$ language.
+- $\text{LanguageFamily}_{i}$ is a categorical variable for each language family included in the sample. The reference category is the Indo-European langauge family, by which the coefficients for the other levels of Language_Family will then represent the difference in the log odds of the outcome relative to Indo-European languages.
+- $\text{NumberOfPhones}_{i}$ is an integer variable on the number of phones in the word for 'nose'
+- $\text{NumberOfSyllables}_{i}$ is an integer variable on the number of syllables in the word for 'nose'
+- The $\beta$ coefficients quantify the influence of each predictor.
+
+
+
+A slight adaptation of the model gives us this second, simpler model
+
+$$
+\log\left(\frac{p_i}{1-p_i}\right) = \beta_0 + \beta_1 \text{IsIndoEuropean}_i + \beta_2 \text{NumberOfPhones}_i + \beta_3 \text{NumberOfSyllables}_i
+$$
+
+where:
+- $\text{IsIndoEuropean}_{i}$ is a binary variable indicating whether the language belongs to the Indo-European language family or not
+
+### Models Justification
+The choice of a logistic regression model is justified by the binary nature of our primary outcome of interest: the presence or absence of nasal phones in words for "nose." Logistic regression allows us to account for multiple predictors and their interaction effects, offering a nuanced understanding of how linguistic characteristics influence the phonosemantic relationship. 
+
+Firstly, the Indo-European language family, with its wide geographical distribution and historical significance, has been subject to extensive linguistic research. By isolating the effect of being an Indo-European language, we can scrutinize whether the phonosemantic trends observed are unique to this family or if they extend across language families, suggesting a more universal phonosemantic principle at play. By incorporating this binary variable into our model, we aim to meticulously assess the impact of linguistic lineage on the use of nasal phones, thereby isolating the effects of genetic relationships from our analysis. 
+
+Languages within the same family may share structural similarities and historical borrowings that could influence their phonological systems, including the use of nasal sounds. By explicitly incorporating this factor into our model, we aim to isolate the effect of language family from other linguistic and phonological variables, thereby ensuring that any observed patterns in nasal phone presence are not merely artifacts of linguistic lineage but rather reflect deeper phonosemantic relationships. By further incorporating the categorical variable for all language families, we can also assess an additional impact on the outcome based on the language family.
+
+Moreover, including the number of phones and syllables as a predictor variable is crucial in order to account for the fact that longer words should be on average more likely to include a nasal phone than shorter words, holding all other things equal. 
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+library(dplyr)
+library(stats)
+
+# 'LanguageFamily' needs to be converted to a factor if it's not already
+nose_typology_data$LanguageFamily <- as.factor(nose_typology_data$language_family)
+
+nose_typology_data$LanguageFamily <- relevel(nose_typology_data$LanguageFamily, ref = "Indo-European")
+
+
+# 'Number_Of_Phones' and 'Number_Of_Syllables' should be integer or numeric variables
+# Check data types and convert if necessary
+nose_typology_data$Number_Of_Phones <- as.integer(nose_typology_data$phone_number)
+nose_typology_data$Number_Of_Syllables <- as.integer(nose_typology_data$syllable_number)
+
+# Fit the logistic regression model
+model1 <- glm(formula = nasal_phone ~ LanguageFamily + Number_Of_Phones + Number_Of_Syllables,
+             family = binomial(link = "logit"), 
+             data = nose_typology_data)
+
+model2 <- glm(formula = nasal_phone ~ is_indo_european + Number_Of_Phones + Number_Of_Syllables,
+             family = binomial(link = "logit"), 
+             data = nose_typology_data)
+```
+
+\newpage
+# Results {#sec-results}
+
+## Impact of Language Family
+The logistic regression model identified the Indo-European language family as the baseline for comparison. This allowed for a direct assessment of how belonging to different language families influences the probability of a language featuring nasal phonemes in the word for "nose." 
+Model 1 (see @sec-appendix) mostly showed diversity in the impact of the language family on featuring a nasal phone, with some language families showing a higher probability, and others a lower probability compared to the Indo-European baseline. However, except for Sino-Tibetan (e.g. Mandarin Chinese) and Northeast Caucasian (e.g. Chechen) languages, which are significantly less likely to feature nasal phones, none of the language families impact the overall log-odds ratio significantly. 
+
+It should be noted that we are not interested in the effect of any single language family, since in this methodology, many language families would have data unduly influenced by only one or two representatives - not a sufficient sample size. We are more interested in making cross-linguistic claims and investigate whether there is an overall effect of language family, as in whether the Indo-European languages are outliers or follow an overall trend. Therefore, model 2 is more appropriate for this purpose, as it uses a binary variable "is_indo_european" as one of its predictor variables. @tbl-model2-summary shows that the odds of having at least one nasal phoneme in the word for "nose" are approximately 2.67 times higher for languages in the Indo-European language family compared to languages not in this family, holding other variables constant. However, since this effect does not appear to be statistically significant, we cannot make any definitive claims on whether there is no cross-linguistic trend to nasal phones in the word for "nose".
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-model2-summary
+#| tbl-cap: Logistic Regression Model Summary (* < .05, ** < .01, *** < .001)
+
+
+model_summary <- tidy(model2, conf.int = TRUE)
+
+
+model_table <- model_summary %>%
+  select(term = term, estimate = estimate, std.error = std.error, statistic = statistic, p.value = p.value) %>%
+  mutate(p.value = case_when(
+    p.value < .001 ~ paste0(sprintf("%.3f", p.value), "***"),
+    p.value < .01 ~ paste0(sprintf("%.3f", p.value), "**"),
+    p.value < .05 ~ paste0(sprintf("%.3f", p.value), "*"),
+    p.value < .1 ~ paste0(sprintf("%.3f", p.value), "."),
+    TRUE ~ as.character(sprintf("%.3f", p.value))
+  )) %>%
+  mutate(odds_ratio = exp(estimate))
+
+# Using kable to create the table
+kable(model_table, format = "html", digits = 3) 
+```
+## Impact of Phonetic Complexity ##
+The models further explored the role of phonetic complexity, as measured by the number of phones and syllables in words for "nose". As shown in @tbl-model2-summary, for each additional phone in the word for 'nose', there was a statistically significant increase in the likelihood of nasal phoneme presence (Coefficient estimate = 0.92, OR = 2.51, p < 0.001). This suggests that longer words are more likely to include nasal sounds, as expected. In contrast, an an increase in the number of syllables was associated with a decreased likelihood of nasal phoneme presence (Coefficient = -1.32, OR = 0.26, p < 0.01), indicating that shorter words are more conducive to nasal sounds.
+
+## Permutation Test ##
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+# Calculate the observed difference in proportions
+obs_diff <- nose_typology_data %>%
+  group_by(is_indo_european) %>%
+  summarize(prop_nasal = mean(nasal_phone, na.rm = TRUE)) %>%
+  summarise(diff = diff(prop_nasal)) %>%
+  pull(diff)
+
+# Function to permute the 'is_indo_european' labels and calculate the difference in proportions
+permute_diff <- function(data) {
+  permuted <- data %>%
+    mutate(is_indo_european = sample(is_indo_european)) %>%
+    group_by(is_indo_european) %>%
+    summarize(prop_nasal = mean(nasal_phone, na.rm = TRUE)) %>%
+    summarise(diff = diff(prop_nasal)) %>%
+    pull(diff)
+  
+  return(permuted)
+}
+
+# Perform the permutation test 10,000 times
+set.seed(123) # For reproducibility
+perm_results <- replicate(10000, permute_diff(nose_typology_data))
+
+# Calculate the p-value
+p_value <- mean(abs(perm_results) >= abs(obs_diff))
+
+
+```
+
+The permutation test conducted to assess the robustness of our findings yielded a p-value of 0.0243. This result suggests that the patterns we observed—specifically, the presence of nasal phonemes in words for "nose" being related to certain linguistic characteristics—are unlikely to be due to chance. A p-value below the commonly accepted threshold of 0.05 indicates statistical significance, providing support for the hypothesis that there is a meaningful phonosemantic relationship at play.
+
+In essence, this finding strengthens our confidence in the initial logistic regression analysis, suggesting that the observed associations between the linguistic features of languages and the phonetic representation of the word for "nose" may indeed reflect sound symbolism, rather than arbitrary variation or an inherent feature of languages of the Indo-European language family. This supports the idea that the sounds used in words for "nose" across various languages are not randomly selected.
+
+
+\newpage
+
+# Discussion {#sec-discussion}
+This study explored the correlation between nasal phonemes in words for "nose" across a diverse linguistic dataset. By employing a logistic regression model and subsequent permutation testing, I investigated the hypothesis that a non-arbitrary relationship exists between the sound of these words and their meaning, extending beyond mere phonological coincidence to hint at a deeper, possibly universal, phonosemantic bias.
+
+The findings show significant phonosemantic patterns, revealing that the occurrence of nasal phonemes in words for "nose" is not uniformly random across languages. Specifically, the study highlighted a statistically significant propensity for languages, regardless of their Indo-European lineage, to feature nasal sounds in the lexical representation of "nose." This supports the broader hypothesis of sound symbolism in language, suggesting that certain phonetic features may inherently carry semantic weight in the natural development of human languages [@joo2019, @wichmann2010]. 
+
+The findings related to the impact of phonetic complexity - namely, the number of phones and syllables in words for "nose" - offer insights into the dynamics of language structure and meaning. The positive correlation between word length and the likelihood of featuring a nasal phone supports the notion that phonetic complexity may play a role in phonosemantic associations. This relationship invites further reflection on how linguistic constraints and opportunities influence the evolution of word forms in relation to their semantic content. Across langauge families, the longer the word for 'nose', the more likely to feature a nasal phone, supporting at least some element of randomness in the selection of phones, as expected. Moreover, the fact that shorter words for "nose" are more likely to contain nasal sounds could reflect a cognitive or communicative efficiency in language development, where the phonetic form of words closely related to nasal functions mirrors their semantic significance. 
+
+A nuanced understanding of how linguistic genetic relationships and structural characteristics influence phonosemantic associations emerged from the analysis. The Indo-European language family served as a crucial focal point, with a vast majority of its members featuring not only a nasal phone, but having a nasal phone in the syllable onset. This specificity prompts a deeper investigation into the historical and phonological development of Indo-European languages, exploring whether this feature reflects a deeper, perhaps ancient, phonosemantic bias within this family. The contrast with other language families, where nasal phonemes do not necessarily occur at the onset, underscores the complexity of sound symbolism and its variability across linguistic traditions. This observation could lead to a nuanced discussion on the interplay between phonological innovation and semantic stability in the evolution of language. 
+
+
+## Limitations
+Despite a thoughtful methodological approach, this study has some major limitations. The reliance on secondary sources for phonetic transcriptions and the inherent bias towards Indo-European languages, despite efforts to broaden linguistic diversity, may influence the generalizability of our findings. Additionally, the assumption that the frequency of nasal phonemes is consistent across languages simplifies a potentially complex aspect of phonological systems that could merit further investigation. With the current data, it is difficult to impossible to estimate the null hypothesis parameter of nasal phones occuring by chance. This would require a rich corpus of frequency analyses for a variety of languages from different language families, such that we could approximate how likely it is that a word features a nasal phone by chance. However, without such data, the underlying research question remains difficult to answer and allows only for workarounds, as presented in this paper.
+
+## Future Directions
+Expanding the dataset to include more languages from underrepresented families and employing primary phonetic analysis where possible would enhance the comprehensiveness and accuracy of future studies. Moreover, exploring other lexical fields with potential phonosemantic patterns could offer new insights into the universality and limitations of sound symbolism in language. Finally, interdisciplinary collaborations, incorporating cognitive science and neurology, may reveal the psychological and physiological underpinnings of why certain sounds come to symbolize specific concepts universally.
+
+\newpage
+
+\appendix
+
+# Appendix {#sec-appendix}
+```{r, echo=FALSE}
+summary(model1)
+```
+
+
+
+
+\newpage
+
+# References

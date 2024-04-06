@@ -1,0 +1,242 @@
+language,language_family,latin_transcription,ipa_transcription,syllable_number,phone_number,nasal_phone_number,nasal_phones_per_syllable,nasal_phones_proportion,nasal_phone,nasal_onset,first_phone,is_indo_european,translation_validation
+English,Indo-European,Nose,/nowz/,1,4,1,1,0.25,TRUE,TRUE,/n,TRUE,Back-and-Forth-Translation
+German,Indo-European,Nase,/na:zə/,2,5,1,0.5,0.2,TRUE,TRUE,/n,TRUE,Back-and-Forth-Translation
+Afrikaans,Indo-European,Neus,/nɪøs/,1,4,1,1,0.25,TRUE,TRUE,/n,TRUE,Back-and-Forth-Translation
+Albanian,Indo-European,Hunda,/hu:nda/,2,6,1,0.5,0.1666666667,TRUE,FALSE,/h,TRUE,Back-and-Forth-Translation
+Amharic,Afro-Asiatic,Afincha,/ʔafənəč̣a/,3,9,1,0.3333333333,0.1111111111,TRUE,FALSE,/ʔ,FALSE,Back-and-Forth-Translation
+Arabic,Afro-Asiatic,Anf,/ænf/,1,3,1,1,0.3333333333,TRUE,FALSE,/æ,FALSE,Back-and-Forth-Translation
+Armenian,Indo-European,Kity,/kitə/,2,4,0,0,0,FALSE,FALSE,/k,TRUE,Back-and-Forth-Translation
+Azerbaijani,Turkic,Burun,/burun/,2,5,1,0.5,0.2,TRUE,FALSE,/b,FALSE,Back-and-Forth-Translation
+Basque,Isolate,Sudurra,/sudura/,3,6,0,0,0,FALSE,FALSE,/s,FALSE,Back-and-Forth-Translation
+Bengali,Indo-European,Nak,/naˑk/,1,4,1,1,0.25,TRUE,TRUE,/n,TRUE,Back-and-Forth-Translation
+Bosnian-Croatian-Serbian,Indo-European,Nos,/nos/,1,3,1,1,0.3333333333,TRUE,TRUE,/n,TRUE,Back-and-Forth-Translation
+Catalan,Indo-European,Nas,/nas/,1,3,1,1,0.3333333333,TRUE,TRUE,/n,TRUE,Back-and-Forth-Translation
+Cebuano,Austronesian,Ilong,/iloŋ/,2,4,1,0.5,0.25,TRUE,FALSE,/i,FALSE,Back-and-Forth-Translation
+Chichewa,Niger-Congo,Mphuno,/ᵐpunɔ/,2,5,2,1,0.4,TRUE,TRUE,/ᵐ,FALSE,Back-and-Forth-Translation
+Mandarin,Sino-Tibetan,Bizi,/bitsɨ/,2,5,0,0,0,FALSE,FALSE,/b,FALSE,Back-and-Forth-Translation
+Corsican,Indo-European,Nasu,/nasu/,2,4,1,0.5,0.25,TRUE,TRUE,/n,TRUE,Back-and-Forth-Translation
+Cantonese,Sino-Tibetan,Bi,/bi/,1,2,0,0,0,FALSE,FALSE,/b,FALSE,Back-and-Forth-Translation
+Danish,Indo-European,Næse,/nɛːsə/,2,5,1,0.5,0.2,TRUE,TRUE,/n,TRUE,Back-and-Forth-Translation
+Dutch,Indo-European,Neus,/nøːs/,1,4,1,1,0.25,TRUE,TRUE,/n,TRUE,Back-and-Forth-Translation
+Estonian,Uralic,Nina,/ninɑ/,2,4,2,1,0.5,TRUE,TRUE,/n,FALSE,Back-and-Forth-Translation
+Tagalog,Austronesian,ilong,/iloŋ/,2,4,1,0.5,0.25,TRUE,FALSE,/i,FALSE,Back-and-Forth-Translation
+Finnish,Uralic,Nenä,/nenæ/,2,4,2,1,0.5,TRUE,TRUE,/n,FALSE,Back-and-Forth-Translation
+French,Indo-European,Nez,/ne/,1,2,1,1,0.5,TRUE,TRUE,/n,TRUE,Back-and-Forth-Translation
+Frisian,Indo-European,Noas,/noəs/,1,4,1,1,0.25,TRUE,TRUE,/n,TRUE,Back-and-Forth-Translation
+Galician,Indo-European,nariz,/naris/,2,5,1,0.5,0.2,TRUE,TRUE,/n,TRUE,Back-and-Forth-Translation
+Georgian,Kartvelian,Tskhviri,/tsxviri/,3,7,0,0,0,FALSE,FALSE,/t,FALSE,Back-and-Forth-Translation
+Greek,Indo-European,Myti,/miti/,2,4,1,0.5,0.25,TRUE,TRUE,/m,TRUE,Back-and-Forth-Translation
+Gujarati,Indo-European,Naak,/nɑk/,1,3,1,1,0.3333333333,TRUE,TRUE,/n,TRUE,Back-and-Forth-Translation
+Haitian Creole,Indo-European,Nen,/nen/,1,3,2,2,0.6666666667,TRUE,TRUE,/n,TRUE,Back-and-Forth-Translation
+Hausa,Afro-Asiatic,Hanci,/hantʃi/,2,6,1,0.5,0.1666666667,TRUE,FALSE,/h,FALSE,Back-and-Forth-Translation
+Hawaiian,Austronesian,ihu,/ihu/,2,3,0,0,0,FALSE,FALSE,/i,FALSE,Back-and-Forth-Translation
+Hebrew,Afro-Asiatic,Af,/ʔaf/,1,3,0,0,0,FALSE,FALSE,/ʔ,FALSE,Back-and-Forth-Translation
+Hindustani,Indo-European,Naak,/nak/,1,3,1,1,0.3333333333,TRUE,TRUE,/n,TRUE,Back-and-Forth-Translation
+Hmong,Hmong-Mien,qhov ntswg,/qʰɒvᶯdʐɨk/,2,9,1,0.5,0.1111111111,TRUE,FALSE,/q,FALSE,Back-and-Forth-Translation
+Hungarian,Uralic,orr,/or/,1,2,0,0,0,FALSE,FALSE,/o,FALSE,Back-and-Forth-Translation
+Icelandic,Indo-European,nef,/nɛːv/,1,4,1,1,0.25,TRUE,TRUE,/n,TRUE,Back-and-Forth-Translation
+Igbo,Niger-Congo,imi,/imi/,1,3,1,1,0.3333333333,TRUE,FALSE,/i,FALSE,Back-and-Forth-Translation
+Indonesian,Austronesian,hidung,/hiduŋ/,2,5,1,0.5,0.2,TRUE,FALSE,/h,FALSE,Back-and-Forth-Translation
+Irish,Indo-European,srón,/sɾoːn/,1,5,1,1,0.2,TRUE,FALSE,/s,TRUE,Back-and-Forth-Translation
+Italian,Indo-European,naso,/nazo/,2,4,1,0.5,0.25,TRUE,TRUE,/n,TRUE,Back-and-Forth-Translation
+Japanese,Japonic,Hana,/hana/,2,4,1,0.5,0.25,TRUE,FALSE,/h,FALSE,Back-and-Forth-Translation
+Javanese,Austronesian,irung,/iruŋ/,2,4,1,0.5,0.25,TRUE,FALSE,/i,FALSE,Back-and-Forth-Translation
+Kannada,Dravidian,Mugu,/mu:gu/,2,5,1,0.5,0.2,TRUE,TRUE,/m,FALSE,Back-and-Forth-Translation
+Kazakh,Turkic,murin,/mo̠rən/,2,6,2,1,0.3333333333,TRUE,TRUE,/m,FALSE,Back-and-Forth-Translation
+Khmer,Austro-Asiatic,chramouh,/cramɑʰ/,2,6,1,0.5,0.1666666667,TRUE,FALSE,/c,FALSE,Back-and-Forth-Translation
+Kinyarwanda,Niger-Congo,izuru,/izuɾu/,3,5,0,0,0,FALSE,FALSE,/i,FALSE,Back-and-Forth-Translation
+Korean,Koreanic,Ko,/ko/,1,2,0,0,0,FALSE,FALSE,/k,FALSE,Back-and-Forth-Translation
+Kurdish,Indo-European,Poz,/poz/,1,3,0,0,0,FALSE,FALSE,/p,TRUE,Back-and-Forth-Translation
+Kyrgyz,Turkic,Murun,/murun/,2,5,2,1,0.4,TRUE,TRUE,/m,FALSE,Back-and-Forth-Translation
+Lao,Kra-Dai,Dang,/daŋ/,1,3,1,1,0.3333333333,TRUE,FALSE,/d,FALSE,Back-and-Forth-Translation
+Latvian,Indo-European,Degunu,/dægunu/,3,6,1,0.3333333333,0.1666666667,TRUE,FALSE,/d,TRUE,Back-and-Forth-Translation
+Lithuanian,Indo-European,Nosis,/nozis/,2,5,1,0.5,0.2,TRUE,TRUE,/n,TRUE,Back-and-Forth-Translation
+Malagasy,Austronesian,Orona,/uruna/,3,5,1,0.3333333333,0.2,TRUE,FALSE,/u,FALSE,Back-and-Forth-Translation
+Malay,Austronesian,hidung,/hiduŋ/,2,5,1,0.5,0.2,TRUE,FALSE,/h,FALSE,Back-and-Forth-Translation
+Malayalam,Dravidian,Mukk,/mu:kɨ̆/,2,6,1,0.5,0.1666666667,TRUE,TRUE,/m,FALSE,Back-and-Forth-Translation
+Maltese,Afro-Asiatic,imnieħer,/ɪmnɪ:ħɛr/,3,8,2,0.6666666667,0.25,TRUE,FALSE,/ɪ,FALSE,Back-and-Forth-Translation
+Maori,Austronesian,ihu,/ihu/,2,3,0,0,0,FALSE,FALSE,/i,FALSE,Back-and-Forth-Translation
+Marathi,Indo-European,Naak,/na:k/,1,4,1,1,0.25,TRUE,TRUE,/n,TRUE,Back-and-Forth-Translation
+Mongolian,Mongolic,Khamar,/xamar/,2,5,1,0.5,0.2,TRUE,FALSE,/x,FALSE,Back-and-Forth-Translation
+Burmese,Sino-Tibetan,Nharhkaungg,/n̥àèkɔ́ɪ́ɰ̃/,2,11,2,1,0.1818181818,TRUE,TRUE,/n,FALSE,Back-and-Forth-Translation
+Nepali,Indo-European,Naka,/na:k/,1,4,1,1,0.25,TRUE,TRUE,/n,TRUE,Back-and-Forth-Translation
+Norwegian,Indo-European,Nese,/neəsə/,2,5,1,0.5,0.2,TRUE,TRUE,/n,TRUE,Back-and-Forth-Translation
+Odia,Indo-European,Naak,/na:k/,1,4,1,1,0.25,TRUE,TRUE,/n,TRUE,Back-and-Forth-Translation
+Pashto,Indo-European,Puzeh,/puzeh/,2,5,0,0,0,FALSE,FALSE,/p,TRUE,Back-and-Forth-Translation
+Persian,Indo-European,Bini,/bi:ni:/,2,6,1,0.5,0.1666666667,TRUE,FALSE,/b,TRUE,Back-and-Forth-Translation
+Polish,Indo-European,Nos,/nos/,1,3,1,1,0.3333333333,TRUE,TRUE,/n,TRUE,Back-and-Forth-Translation
+Portuguese,Indo-European,Nariz,/nɐɾis/,2,5,1,0.5,0.2,TRUE,TRUE,/n,TRUE,Back-and-Forth-Translation
+Punjabi,Indo-European,Naka,/na:k/,1,4,1,1,0.25,TRUE,TRUE,/n,TRUE,Back-and-Forth-Translation
+Romanian,Indo-European,nas,/nas/,1,3,1,1,0.3333333333,TRUE,TRUE,/n,TRUE,Back-and-Forth-Translation
+Russian,Indo-European,nos,/nos/,1,3,1,1,0.3333333333,TRUE,TRUE,/n,TRUE,Back-and-Forth-Translation
+Samoan,Austronesian,isu,/isu/,2,3,0,0,0,FALSE,FALSE,/i,FALSE,Back-and-Forth-Translation
+Scots Gaelic,Indo-European,sròn,/sɾoːn/,1,5,1,1,0.2,TRUE,FALSE,/s,TRUE,Back-and-Forth-Translation
+Sesotho,Niger-Congo,nko,/ŋ̩ko/,2,4,1,0.5,0.25,TRUE,TRUE,/ŋ,FALSE,Back-and-Forth-Translation
+Shona,Niger-Congo,mhino,/m̤ino/,2,5,1,0.5,0.2,TRUE,TRUE,/m,FALSE,Back-and-Forth-Translation
+Sindhi,Indo-European,Nak,/nak/,1,3,1,1,0.3333333333,TRUE,TRUE,/n,TRUE,Back-and-Forth-Translation
+Sinhala,Indo-European,Nasaya,/na:se:/,2,6,1,0.5,0.1666666667,TRUE,TRUE,/n,TRUE,Back-and-Forth-Translation
+Somali,Afro-Asiatic,Sanka,/sænkæ/,2,5,1,0.5,0.2,TRUE,FALSE,/s,FALSE,Back-and-Forth-Translation
+Spanish,Indo-European,nariz,/nariθ/,2,5,1,0.5,0.2,TRUE,TRUE,/n,TRUE,Back-and-Forth-Translation
+Sundanese,Austronesian,irung,/iruŋ/,2,4,1,0.5,0.25,TRUE,FALSE,/i,FALSE,Back-and-Forth-Translation
+Swahili,Niger-Congo,pua,/puɑ/,2,3,0,0,0,FALSE,FALSE,/p,FALSE,Back-and-Forth-Translation
+Swedish,Indo-European,Näsa,/neːsa/,2,5,1,0.5,0.2,TRUE,TRUE,/n,TRUE,Back-and-Forth-Translation
+Tajik,Indo-European,Bini,/bi:ni:/,2,6,1,0.5,0.1666666667,TRUE,FALSE,/b,TRUE,Back-and-Forth-Translation
+Tamil,Dravidian,Mukku,/mukɯ/,2,4,1,0.5,0.25,TRUE,TRUE,/m,FALSE,Back-and-Forth-Translation
+Tatar,Turkic,Borun,/borɤn/,2,5,1,0.5,0.2,TRUE,FALSE,/b,FALSE,Back-and-Forth-Translation
+Tarifit,Afro-Asiatic,Thinza,/θɪnzæ/,2,5,1,0.5,0.2,TRUE,FALSE,/θ,FALSE,Cross-Referencing
+Telugu,Dravidian,Mukku,/muk:u:/,2,6,1,0.5,0.1666666667,TRUE,TRUE,/m,FALSE,Back-and-Forth-Translation
+Thai,Kra-Dai,Cmuk,/tɕmu:k̚/,2,7,1,0.5,0.1428571429,TRUE,FALSE,/t,FALSE,Back-and-Forth-Translation
+Turkish,Turkic,Burun,/burun/,2,5,1,0.5,0.2,TRUE,FALSE,/b,FALSE,Back-and-Forth-Translation
+Turkmen,Turkic,Burun,/burun/,2,5,1,0.5,0.2,TRUE,FALSE,/b,FALSE,Back-and-Forth-Translation
+Ukrainian,Indo-European,Nis,/nis/,1,3,1,1,0.3333333333,TRUE,TRUE,/n,TRUE,Back-and-Forth-Translation
+Uyghur,Turkic,Burun,/burun/,2,5,1,0.5,0.2,TRUE,FALSE,/b,FALSE,Back-and-Forth-Translation
+Uzbek,Turkic,Burun,/burun/,2,5,1,0.5,0.2,TRUE,FALSE,/b,FALSE,Back-and-Forth-Translation
+Vietnamese,Austro-Asiatic,Mui,/muə̯j/,2,5,1,0.5,0.2,TRUE,TRUE,/m,FALSE,Back-and-Forth-Translation
+Welsh,Indo-European,trwyn,/trʊɨ̯n/,2,6,1,0.5,0.1666666667,TRUE,FALSE,/t,TRUE,Back-and-Forth-Translation
+Xhosa,Niger-Congo,impumlo,/impumlo/,3,7,2,0.6666666667,0.2857142857,TRUE,FALSE,/i,FALSE,Back-and-Forth-Translation
+Yiddish,Indo-European,Noz,/noz/,1,3,1,1,0.3333333333,TRUE,TRUE,/n,TRUE,Back-and-Forth-Translation
+Yoruba,Niger-Congo,imu,/imu/,2,3,1,0.5,0.3333333333,TRUE,FALSE,/i,FALSE,Back-and-Forth-Translation
+Zulu,Niger-Congo,ikhala,/ikʰala/,3,6,0,0,0,FALSE,FALSE,/i,FALSE,Back-and-Forth-Translation
+Divehi,Indo-European,nefat,/ne:fat̪/,2,7,1,0.5,0.1428571429,TRUE,TRUE,/n,TRUE,Back-and-Forth-Translation
+Fijian,Austronesian,Ucu,/uðu/,2,3,0,0,0,FALSE,FALSE,/u,FALSE,Back-and-Forth-Translation
+Inuktituk,Eskimo-Aleut,Qingaq,/qiŋaq/,2,5,1,0.5,0.2,TRUE,FALSE,/q,FALSE,Back-and-Forth-Translation
+Kurdish (Western),Indo-European,Loot,/lu:t/,1,4,0,0,0,FALSE,FALSE,/l,TRUE,Back-and-Forth-Translation
+Otomi,Oto-Manguean,iri xuñi,/irixuɲi/,3,7,1,0.3333333333,0.1428571429,TRUE,FALSE,/i,FALSE,Back-and-Forth-Translation
+Tahitian,Austronesian,te ihu,/teihu/,3,5,0,0,0,FALSE,FALSE,/t,FALSE,Back-and-Forth-Translation
+Tibetan,Sino-Tibetan,Nab,/nab/,1,3,1,1,0.3333333333,TRUE,TRUE,/n,FALSE,Back-and-Forth-Translation
+Tigrinya,Afro-Asiatic,Afenca,/ʔafənəč̣a/,3,9,1,0.3333333333,0.1111111111,TRUE,FALSE,/ʔ,FALSE,Back-and-Forth-Translation
+Tongan,Austronesian,ihu,/ihu/,2,3,0,0,0,FALSE,FALSE,/i,FALSE,Back-and-Forth-Translation
+Yucatec Maya,Maya,Ni',/niʔ/,1,3,1,1,0.3333333333,TRUE,TRUE,/n,FALSE,Back-and-Forth-Translation
+Dholuo,Nilo-Saharan,Um,/um/,1,2,1,1,0.5,TRUE,FALSE,/u,FALSE,Cross-Referencing
+Kanuri,Nilo-Saharan,Kinda,/kinda/,2,5,1,0.5,0.2,TRUE,FALSE,/k,FALSE,Cross-Referencing
+Dinka,Nilo-Saharan,Aghau,/aɣaɔ/,2,4,0,0,0,FALSE,FALSE,/a,FALSE,Cross-Referencing
+Akan,Niger-Congo,hwene,/hʷene/,2,5,1,0.5,0.2,TRUE,FALSE,/h,FALSE,Cross-Referencing
+Ga,Niger-Congo,gugo,/gugɔ/,2,4,0,0,0,FALSE,FALSE,/g,FALSE,Cross-Referencing
+Frafra,Niger-Congo,yore,/yõorɛ/,2,6,1,0.5,0.1666666667,TRUE,FALSE,/y,FALSE,Cross-Referencing
+Kikuyu,Niger-Congo,nyiuru,/ɲuru/,2,4,1,0.5,0.25,TRUE,TRUE,/ɲ,FALSE,Cross-Referencing
+Meru,Niger-Congo,nyiuru,/ɲuru/,2,4,1,0.5,0.25,TRUE,TRUE,/ɲ,FALSE,Cross-Referencing
+Luganda,Niger-Congo,Ennyido,/eɲɲido/,3,6,2,0.6666666667,0.3333333333,TRUE,FALSE,/e,FALSE,Cross-Referencing
+Nyaneka,Niger-Congo,Enyulu,/eɲulu/,3,5,1,0.3333333333,0.2,TRUE,FALSE,/e,FALSE,Cross-Referencing
+Tswana,Niger-Congo,Nko,/ŋ̩ko/,2,4,1,0.5,0.25,TRUE,TRUE,/ŋ,FALSE,Cross-Referencing
+Venda,Niger-Congo,Ningo,/niŋɔ/,2,4,1,0.5,0.25,TRUE,TRUE,/n,FALSE,Cross-Referencing
+Khoekhoe,Khoe,ǂguis,/ǂkuis/,2,5,0,0,0,FALSE,FALSE,/ǂ,FALSE,Cross-Referencing
+Edo,Niger-Congo,Unu,/unu/,2,3,1,0.5,0.3333333333,TRUE,FALSE,/u,FALSE,Cross-Referencing
+!Xóõ,Tuu,ǀnùhɲa,/ǀnuhɲa/,2,6,2,1,0.3333333333,TRUE,FALSE,/ǀ,FALSE,Cross-Referencing
+Abaga,Trans-New Guinea,Anogofa,/anogofa/,4,7,1,0.25,0.1428571429,TRUE,FALSE,/a,FALSE,Cross-Referencing
+Abau,Sepik,Kasan,/kasan/,2,5,1,0.5,0.2,TRUE,FALSE,/k,FALSE,Cross-Referencing
+Abaza,Northwest Caucasian,Pyncla,/pəntsla/,2,7,1,0.5,0.1428571429,TRUE,FALSE,/p,FALSE,Cross-Referencing
+Abkhaz,Northwest Caucasian,Apintsa,/apʰɨnts͡ʼa/,3,10,1,0.3333333333,0.1,TRUE,FALSE,/a,FALSE,Cross-Referencing
+Mon,Austro-Asiatic,Gharn,/kʰan/,1,4,1,1,0.25,TRUE,FALSE,/k,FALSE,Cross-Referencing
+Achumawi,Hokan,yamui,/jamui/,3,5,1,0.3333333333,0.2,TRUE,FALSE,/j,FALSE,Cross-Referencing
+Adele,Niger-Congo,Dininfere,/dininfere/,4,9,2,0.5,0.2222222222,TRUE,FALSE,/d,FALSE,Cross-Referencing
+Adilabad Gondi,Dravidian,Mosor,/mosor/,2,5,1,0.5,0.2,TRUE,TRUE,/m,FALSE,Cross-Referencing
+Adyghe,Northwest Caucasian,Pé,/pa/,1,2,0,0,0,FALSE,FALSE,/p,FALSE,Cross-Referencing
+Aeka,Trans-New Guinea,Mende,/mende/,2,5,1,0.5,0.2,TRUE,TRUE,/m,FALSE,Cross-Referencing
+Aekyom,Trans-New Guinea,Koe,/koe/,2,3,1,0.5,0.3333333333,TRUE,FALSE,/k,FALSE,Cross-Referencing
+Aghu,Trans-New Guinea,Sipayo,/sipayo/,3,6,0,0,0,FALSE,FALSE,/s,FALSE,Cross-Referencing
+Aguaruna,Chicham,nuhi,/nuhi/,2,4,1,0.5,0.25,TRUE,TRUE,/n,FALSE,Cross-Referencing
+Agi,Torricelli,tuwarka,/tuwarka/,3,7,0,0,0,FALSE,FALSE,/t,FALSE,Cross-Referencing
+Khasi,Austronesian,Khmut,/kʰmut/,1,5,1,1,0.2,TRUE,FALSE,/k,FALSE,Cross-Referencing
+Koyraboro Senni,Nilo-Saharan,Ninaa,/nina:/,2,5,2,1,0.4,TRUE,TRUE,/n,FALSE,Cross-Referencing
+Min Nan,Sino-Tibetan,Phin,/pin/,1,3,1,1,0.3333333333,TRUE,FALSE,/p,FALSE,Cross-Referencing
+Navajo,Dené–Yeniseian,Achin,/atʃʰɪ̃́:n/,2,9,1,0.5,0.1111111111,TRUE,FALSE,/a,FALSE,Cross-Referencing
+Northern Sami,Uralic,Njunni,/ɲun:i/,2,5,2,1,0.4,TRUE,TRUE,/ɲ,FALSE,Cross-Referencing
+Svan,Kartvelian,Nepkhvna,/nɛpʰχvnɑ/,3,8,2,0.6666666667,0.25,TRUE,TRUE,/n,FALSE,Cross-Referencing
+Agutaynen,Austronesian,Orong,/oroŋ/,2,4,1,0.5,0.25,TRUE,FALSE,/o,FALSE,Cross-Referencing
+Aimele,Trans-New Guinea,migi,/migi/,2,4,1,0.5,0.25,TRUE,TRUE,/m,FALSE,Cross-Referencing
+Ainu,Ainu,etu,/etu/,2,3,0,0,0,FALSE,FALSE,/e,FALSE,Cross-Referencing
+Akawaio,Cariban,enna,/en:a/,2,4,2,1,0.5,TRUE,FALSE,/e,FALSE,Cross-Referencing
+Akkadian,Afro-Asiatic,appu,/ap:u/,2,4,0,0,0,FALSE,FALSE,/a,FALSE,Cross-Referencing
+Silacayoapan Mixtec,Oto-Manguean,xitin,/xɨtin/,2,5,1,0.5,0.2,TRUE,FALSE,/x,FALSE,Cross-Referencing
+Alamblak,Sepik,hhušɨ ɨth,/huʃɯmɯt/,3,7,1,0.3333333333,0.1428571429,TRUE,FALSE,/h,FALSE,Cross-Referencing
+Nanai,Tungusic,Oporo,/oporo/,3,5,0,0,0,FALSE,FALSE,/o,FALSE,Cross-Referencing
+Even,Tungusic,Ongat,/oŋat/,2,4,1,0.5,0.25,TRUE,FALSE,/o,FALSE,Cross-Referencing
+Evenski,Tungusic,Ongokto,/oŋokto/,3,6,1,0.3333333333,0.1666666667,TRUE,FALSE,/o,FALSE,Cross-Referencing
+Oroqen,Tungusic,Ongokto,/ɔŋɔktɔ/,3,6,1,0.3333333333,0.1666666667,TRUE,FALSE,/ɔ,FALSE,Cross-Referencing
+Ket,Dené–Yeniseian,Olen,/olən/,2,4,1,0.5,0.25,TRUE,FALSE,/o,FALSE,Cross-Referencing
+Kalaalisut,Eskimo-Aleut,qingaq,/qiŋaq/,2,5,1,0.5,0.2,TRUE,FALSE,/q,FALSE,Cross-Referencing
+Biao-Jiao Mien,Hmong-Mien,Blikhwan,/blixwanʔ/,2,8,1,0.5,0.125,TRUE,FALSE,/b,FALSE,Cross-Referencing
+Hadza,Isolate,Inthawe,/intʰawe/,3,7,1,0.3333333333,0.1428571429,TRUE,FALSE,/i,FALSE,Cross-Referencing
+Sandawe,Isolate,N|ati,/ŋ|ati̥/,2,6,1,0.5,0.1666666667,TRUE,TRUE,/ŋ,FALSE,Cross-Referencing
+Shan,Kra-Dai,Kolaung,/kʰolauŋ/,2,7,1,0.5,0.1428571429,TRUE,FALSE,/k,FALSE,Cross-Referencing
+Zhuang,Kra-Dai,Ndaeng,/ɗaŋ/,1,3,1,1,0.3333333333,TRUE,FALSE,/ɗ,FALSE,Cross-Referencing
+Chechen,Northeast Cauciasian,Mara,/mɑra/,2,4,1,0.5,0.25,TRUE,TRUE,/m,FALSE,Cross-Referencing
+Avar,Northeast Cauciasian,Megler,/megler/,2,6,1,0.5,0.1666666667,TRUE,TRUE,/m,FALSE,Cross-Referencing
+Lezghian,Northeast Cauciasian,Ner,/ner/,1,3,1,1,0.3333333333,TRUE,TRUE,/n,FALSE,Cross-Referencing
+Dargwa,Northeast Cauciasian,Kank,/kaˤnk'/,1,6,1,1,0.1666666667,TRUE,FALSE,/k,FALSE,Cross-Referencing
+Ingush,Northeast Cauciasian,Merazh,/meraʒ/,2,5,1,0.5,0.2,TRUE,TRUE,/m,FALSE,Cross-Referencing
+Lak,Northeast Cauciasian,Maj,/maj/,1,3,1,1,0.3333333333,TRUE,TRUE,/m,FALSE,Cross-Referencing
+Khinalug,Northeast Cauciasian,Klytyr,/klytyr/,2,6,0,0,0,FALSE,FALSE,/k,FALSE,Cross-Referencing
+Tabasaran,Northeast Cauciasian,Xyhy,/qʰyɦy/,2,5,0,0,0,FALSE,FALSE,/q,FALSE,Cross-Referencing
+Tsakhur,Northeast Cauciasian,Xov,/qʰov/,1,4,0,0,0,FALSE,FALSE,/q,FALSE,Cross-Referencing
+Kabardian,Northwest Caucasian,Pé,/pa/,1,2,0,0,0,FALSE,FALSE,/p,FALSE,Cross-Referencing
+Bashkir,Turkic,Tanau,/tanau/,2,5,1,0.5,0.2,TRUE,FALSE,/t,FALSE,Cross-Referencing
+Chuvash,Turkic,Samsa,/sɒmsa/,2,5,1,0.5,0.2,TRUE,FALSE,/s,FALSE,Cross-Referencing
+Karakalpak,Turkic,Murin,/murɯn/,2,5,2,1,0.4,TRUE,TRUE,/m,FALSE,Cross-Referencing
+Crimean Tatar,Turkic,Burun,/burun/,2,5,1,0.5,0.2,TRUE,FALSE,/b,FALSE,Cross-Referencing
+Kumyk,Turkic,Burun,/burun/,2,5,1,0.5,0.2,TRUE,FALSE,/b,FALSE,Cross-Referencing
+Karachay-Balkar,Turkic,Burun,/burun/,2,5,1,0.5,0.2,TRUE,FALSE,/b,FALSE,Cross-Referencing
+Yakut,Turkic,Murun,/murun/,2,5,1,0.5,0.2,TRUE,TRUE,/m,FALSE,Cross-Referencing
+Tuvan,Turkic,Dumcuk,/dumtʃuk/,2,7,1,0.5,0.1428571429,TRUE,FALSE,/d,FALSE,Cross-Referencing
+Nogai,Turkic,Buryn,/buryn/,2,5,1,0.5,0.2,TRUE,FALSE,/b,FALSE,Cross-Referencing
+Altai,Turkic,Tumcuk,/tumtʃuk/,2,7,1,0.5,0.1428571429,TRUE,FALSE,/t,FALSE,Cross-Referencing
+Khakas,Turkic,Tumzux,/tumzux/,2,6,1,0.5,0.1666666667,TRUE,FALSE,/t,FALSE,Cross-Referencing
+Shor,Turkic,Purun,/purun/,2,5,1,0.5,0.2,TRUE,FALSE,/p,FALSE,Cross-Referencing
+Tofa,Turkic,Haaj,/ha:j/,1,4,0,0,0,FALSE,FALSE,/h,FALSE,Cross-Referencing
+Nganasan,Uralic,Ngyngke,/ŋʏŋkə/,2,5,2,1,0.4,TRUE,TRUE,/ŋ,FALSE,Cross-Referencing
+Nenets,Uralic,Piya,/pija/,2,4,0,0,0,FALSE,FALSE,/p,FALSE,Cross-Referencing
+Enets,Uralic,Puya,/puya/,2,4,0,0,0,FALSE,FALSE,/p,FALSE,Cross-Referencing
+Mansi,Uralic,Nol,/nol/,1,3,1,1,0.3333333333,TRUE,TRUE,/n,FALSE,Cross-Referencing
+Udmurt,Uralic,Nyr,/nɯr/,1,3,1,1,0.3333333333,TRUE,TRUE,/n,FALSE,Cross-Referencing
+Komi,Uralic,Nyr,/nɯr/,1,3,1,1,0.3333333333,TRUE,TRUE,/n,FALSE,Cross-Referencing
+Permyak,Uralic,Nyr,/nɯr/,1,3,1,1,0.3333333333,TRUE,TRUE,/n,FALSE,Cross-Referencing
+Eastern Mari,Uralic,üpšynčyk,/ypʃəntʃək/,1,9,1,1,0.1111111111,TRUE,FALSE,/y,FALSE,Cross-Referencing
+Erzya,Uralic,Sudo,/sudo/,2,4,0,0,0,FALSE,FALSE,/s,FALSE,Cross-Referencing
+Moksha,Uralic,Salhka,/ʃalxka/,2,6,0,0,0,FALSE,FALSE,/ʃ,FALSE,Cross-Referencing
+Karelian,Uralic,Nenä,/nenæ/,2,4,2,1,0.5,TRUE,TRUE,/n,FALSE,Cross-Referencing
+Southern Sami,Uralic,Njuenie,/ɲʉenie/,2,6,2,1,0.3333333333,TRUE,TRUE,/ɲ,FALSE,Cross-Referencing
+Lule Sami,Uralic,Njunnje,/ɲunɲie̯/,2,7,3,1.5,0.4285714286,TRUE,TRUE,/ɲ,FALSE,Cross-Referencing
+Pite Sami,Uralic,Njuonne,/ɲuo̯n:e/,2,7,2,1,0.2857142857,TRUE,TRUE,/ɲ,FALSE,Cross-Referencing
+Kildin Sami,Uralic,Njunnj,/ɲunɲ/,2,4,3,1.5,0.75,TRUE,TRUE,/ɲ,FALSE,Cross-Referencing
+Burushaski,Isolate,Mosh,/moʃ/,1,3,1,1,0.3333333333,TRUE,TRUE,/m,FALSE,Cross-Referencing
+Wu Chinese,Sino-Tibetan,Bitou,/bito:/,2,5,0,0,0,FALSE,FALSE,/b,FALSE,Cross-Referencing
+Hakka,Sino-Tibetan,Bi,/bi/,1,2,0,0,0,FALSE,FALSE,/b,FALSE,Cross-Referencing
+Jinyu,Sino-Tibetan,Bizi,/bizi/,2,4,0,0,0,FALSE,FALSE,/b,FALSE,Cross-Referencing
+Xiang,Sino-Tibetan,Bizi,/bizi/,2,4,0,0,0,FALSE,FALSE,/b,FALSE,Cross-Referencing
+Gan,Sino-Tibetan,Bigong,/bigɔŋ/,2,5,1,0.5,0.2,TRUE,FALSE,/b,FALSE,Cross-Referencing
+Pulaar,Niger-Congo,Kinne,/kin:e/,2,5,2,1,0.4,TRUE,FALSE,/k,FALSE,Cross-Referencing
+Pular,Niger-Congo,Kinal,/kinal/,2,5,1,0.5,0.2,TRUE,FALSE,/k,FALSE,Cross-Referencing
+Wolof,Niger-Congo,Baken,/bakɛn/,2,5,1,0.5,0.2,TRUE,FALSE,/b,FALSE,Cross-Referencing
+Min Dong,Sino-Tibetan,Bi,/bi/,1,2,0,0,0,FALSE,FALSE,/b,FALSE,Cross-Referencing
+Oromo,Afro-Asiatic,Funyaan,/fʊɲɑ:n/,2,6,2,1,0.3333333333,TRUE,FALSE,/f,FALSE,Cross-Referencing
+Iloko,Austronesian,Agong,/agoŋ/,2,4,1,0.5,0.25,TRUE,FALSE,/a,FALSE,Cross-Referencing
+Acacucho Quechua,Quechua,Sinqa,/siŋqa/,2,5,1,0.5,0.2,TRUE,FALSE,/s,FALSE,Cross-Referencing
+Ancash,Quechua,Singa,/siŋa/,2,4,1,0.5,0.25,TRUE,FALSE,/s,FALSE,Cross-Referencing
+Cusco Quechua,Quechua,Senqa,/senqa/,2,5,1,0.5,0.2,TRUE,FALSE,/s,FALSE,Cross-Referencing
+S'gaw Karen,Sino-Tibetan,Nase,/nase/,2,4,1,0.5,0.25,TRUE,TRUE,/n,FALSE,Cross-Referencing
+Central Atlas Tamazight,Afro-Asiatic,Tinxar,/tinχar/,2,6,1,0.5,0.1666666667,TRUE,FALSE,/t,FALSE,Cross-Referencing
+Tachelhit,Afro-Asiatic,Inxar,/inχar/,2,5,1,0.5,0.2,TRUE,FALSE,/i,FALSE,Cross-Referencing
+Tamasheq Tuareg,Afro-Asiatic,Tinsar,/tinʃær/,2,6,1,0.5,0.1666666667,TRUE,FALSE,/t,FALSE,Cross-Referencing
+Cherokee,Iroquoian,gayvsoli,/gajʌ̃soli/,4,9,1,0.25,0.1111111111,TRUE,FALSE,/g,FALSE,Cross-Referencing
+Mohawk,Iroquoian,oʼnhonhsa,/oʔnhonhsa/,3,9,2,0.6666666667,0.2222222222,TRUE,FALSE,/o,FALSE,Cross-Referencing
+Cree,Algic,Mikot,/mɪkot/,2,5,1,0.5,0.2,TRUE,TRUE,/m,FALSE,Cross-Referencing
+O'odham,Uto-Aztecan,Dak,/da:k/,1,4,0,0,0,FALSE,FALSE,/d,FALSE,Cross-Referencing
+Nahuatl,Uto-Aztecan,yacatl,/jakatɬ/,2,6,0,0,0,FALSE,FALSE,/j,FALSE,Cross-Referencing
+Q'eqchi',Maya,u'uj,/uʔuj/,2,4,0,0,0,FALSE,FALSE,/u,FALSE,Cross-Referencing
+Tzotzil,Maya,Ni',/niʔ/,1,3,1,1,0.3333333333,TRUE,TRUE,/n,FALSE,Cross-Referencing
+K'iche',Maya,Tza'm,/tsʼaʔm/,1,6,1,1,0.1666666667,TRUE,FALSE,/t,FALSE,Cross-Referencing
+Yaqui,Uto-Aztecan,yeka,/jeka/,2,4,0,0,0,FALSE,FALSE,/j,FALSE,Cross-Referencing
+Carib,Cariban,Emoli,/emolɨ/,3,5,1,0.3333333333,0.2,TRUE,FALSE,/e,FALSE,Cross-Referencing
+Assamese,Indo-European,naka,/naka/,2,4,1,0.5,0.25,TRUE,TRUE,/n,TRUE,Back-and-Forth-Translation
+Aymara,Aymaran,Nasa,/nasa/,2,4,1,0.5,0.25,TRUE,TRUE,/n,FALSE,Back-and-Forth-Translation
+Bambara,Niger-Congo,Nun,/nun/,1,3,2,2,0.6666666667,TRUE,TRUE,/n,FALSE,Back-and-Forth-Translation
+Ewe,Niger-Congo,ŋɔti,/ŋɔti/,2,4,1,0.5,0.25,TRUE,TRUE,/ŋ,FALSE,Back-and-Forth-Translation
+Guaran,Tupian,tĩ,/tĩ/,1,2,1,1,0.5,TRUE,FALSE,/t,FALSE,Back-and-Forth-Translation
+Ilocano,Austronesian,agung,/aguŋ/,2,4,1,0.5,0.25,TRUE,FALSE,/a,FALSE,Back-and-Forth-Translation
+Konkani,Indo-European,nāṅka,/nanka/,2,5,2,1,0.4,TRUE,TRUE,/n,TRUE,Back-and-Forth-Translation
+Lingala,Niger-Congo,zolo,/dzolo/,2,5,0,0,0,FALSE,FALSE,/d,FALSE,Back-and-Forth-Translation
+Ganda,Niger-Congo,enyinndo,/enjindo/,3,7,2,0.6666666667,0.2857142857,TRUE,FALSE,/e,FALSE,Back-and-Forth-Translation
+Manipuri,Sino-Tibetan,naaton,/na:ton/,2,6,2,1,0.3333333333,TRUE,TRUE,/n,FALSE,Back-and-Forth-Translation
+Mizo,Sino-Tibetan,hnar,/hna:r/,1,5,1,1,0.2,TRUE,FALSE,/h,FALSE,Back-and-Forth-Translation
+Tsonga,Niger-Congo,nhompfu,/nhompfu/,2,7,2,1,0.2857142857,TRUE,TRUE,/n,FALSE,Back-and-Forth-Translation
+Twi,Niger-Congo,hwene,/hwene/,2,5,1,0.5,0.2,TRUE,FALSE,/h,FALSE,Back-and-Forth-Translation
