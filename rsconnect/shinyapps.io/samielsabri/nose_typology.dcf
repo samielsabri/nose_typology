@@ -1,0 +1,12 @@
+name: nose_typology
+title: nose_typology
+username: samielsabri
+account: samielsabri
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 11705496
+bundleId: 8470722
+url: https://samielsabri.shinyapps.io/nose_typology/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE

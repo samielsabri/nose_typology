@@ -2,7 +2,7 @@
 
 ## Overview
 
-This repository is dedicated to the analysis of a dataset I created on the word for "Nose" in over 230 languages.
+This repository is dedicated to the phonosemantic statistical analysis of a dataset I created on the word for "Nose" in over 240 languages.
 
 ## File Structure
 
